@@ -1,4 +1,19 @@
 public class Fraction {
+    private int numerator;
+    private int denominator;
+
+    public Fraction()
+    {
+        numerator = 0;
+        denominator = 1;
+    }
+
+    public Fraction(int n, int d)
+    {
+        numerator = n;
+        denominator = d;
+    }
+
     
 }
 
