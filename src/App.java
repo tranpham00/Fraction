@@ -1,6 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Fraction one = new Fraction(2, 6);
+        Fraction two = new Fraction(1, 3);
+        Fraction three = one.add(two);
     }
 }
 

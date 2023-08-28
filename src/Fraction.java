@@ -28,9 +28,24 @@ public class Fraction {
         return (a / gcd(a, b)) * b;
     }
 
+    public int getNum()
+    {
+        return numerator;
+    }
+
+    public int getDen()
+    {
+        return denominator;
+    }
+
     public Fraction add(Fraction other)
     {
-
+        int LCM = lcm(this.denominator, other.getDen());
+        int firstNum = this.numerator * LCM;
+        int secondNum = other.getNum() * LCM;
+        int sumNum = firstNum + secondNum;
+        Fraction sum = new Fraction(sumNum, LCM);
+        return sum;
     }
 /* 
     public Fraction multiply(Fraction other)
@@ -46,8 +61,8 @@ public class Fraction {
     private void reduce()
     {
 
-    }
-}*/
+    }*/
+}
 
 /*
  *
