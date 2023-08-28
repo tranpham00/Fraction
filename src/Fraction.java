@@ -41,8 +41,10 @@ public class Fraction {
     public Fraction add(Fraction other)
     {
         int LCM = lcm(this.denominator, other.getDen());
-        int firstNum = this.numerator * LCM;
-        int secondNum = other.getNum() * LCM;
+        int firstCommon = this.denominator / LCM;
+        int firstNum = this.numerator * firstCommon;
+        int secondCommon = other.getDen() / LCM;
+        int secondNum = other.getNum() * secondCommon;
         numerator = firstNum + secondNum;
         denominator = LCM;
         Fraction newFrac = new Fraction(numerator, denominator);
@@ -53,12 +55,12 @@ public class Fraction {
     public Fraction multiply(Fraction other)
     {
 
-    }
+    }*/
 
     public String toString()
     {
-
-    }*/
+        return numerator + "/" + denominator;
+    }
 
     private void reduce()
     {
