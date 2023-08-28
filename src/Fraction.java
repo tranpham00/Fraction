@@ -28,16 +28,31 @@ public class Fraction {
         return (a / gcd(a, b)) * b;
     }
 
+    public Fraction add(Fraction other)
+    {
 
-}
+    }
+/* 
+    public Fraction multiply(Fraction other)
+    {
+
+    }
+
+    public String toString()
+    {
+
+    }
+
+    private void reduce()
+    {
+
+    }
+}*/
 
 /*
- * need a class with two private instance data, numerator and denominator
- * need two constructors, without and with parameters to initialize
+ *
  * need a function to add fractions
- * - use given algorithm for LCM
  * need a function to multiply fractions
  * need a toString() to return the fraction properly
  * need a function to reduce the fraction (private/static function)
- * - need the given algorithm for GCD
  */
