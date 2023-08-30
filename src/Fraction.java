@@ -51,11 +51,11 @@ public class Fraction {
         newFrac.reduce();
         return newFrac;
     }
-/* 
+
     public Fraction multiply(Fraction other)
     {
-
-    }*/
+        
+    }
 
     public String toString()
     {
@@ -72,8 +72,5 @@ public class Fraction {
 
 /*
  *
- * need a function to add fractions
  * need a function to multiply fractions
- * need a toString() to return the fraction properly
- * need a function to reduce the fraction (private/static function)
  */
