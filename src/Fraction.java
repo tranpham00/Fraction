@@ -45,16 +45,20 @@ public class Fraction {
         int firstNum = this.numerator * firstCommon;
         int secondCommon = other.getDen() / LCM;
         int secondNum = other.getNum() * secondCommon;
-        numerator = firstNum + secondNum;
-        denominator = LCM;
-        Fraction newFrac = new Fraction(numerator, denominator);
+        int num = firstNum + secondNum;
+        int den = LCM;
+        Fraction newFrac = new Fraction(num, den);
         newFrac.reduce();
         return newFrac;
     }
 
     public Fraction multiply(Fraction other)
     {
-        
+        int num = this.numerator * other.getNum();
+        int den = this.denominator * other.getDen();
+        Fraction newFrac = new Fraction(num, den);
+        newFrac.reduce();
+        return newFrac;
     }
 
     public String toString()
@@ -65,12 +69,7 @@ public class Fraction {
     private void reduce()
     {
         int GCD = gcd(numerator, denominator);
-        numerator /= GCD;
-        denominator /= GCD;
+        this.numerator /= GCD;
+        this.denominator /= GCD;
     }
 }
-
-/*
- *
- * need a function to multiply fractions
- */
