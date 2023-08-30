@@ -28,34 +28,21 @@ public class Fraction {
         return (a / gcd(a, b)) * b;
     }
 
-    public int getNum()
-    {
-        return numerator;
-    }
-
-    public int getDen()
-    {
-        return denominator;
-    }
-
     public Fraction add(Fraction other)
     {
-        int LCM = lcm(this.denominator, other.getDen());
-        int firstCommon = this.denominator / LCM;
-        int firstNum = this.numerator * firstCommon;
-        int secondCommon = other.getDen() / LCM;
-        int secondNum = other.getNum() * secondCommon;
-        int num = firstNum + secondNum;
-        int den = LCM;
-        Fraction newFrac = new Fraction(num, den);
+        int LCM = lcm(this.denominator, other.denominator);
+        int first = LCM / this.denominator;
+        int second = LCM / other.denominator;
+        int num = ((first * this.numerator) + (second * other.numerator));
+        Fraction newFrac = new Fraction(num, LCM);
         newFrac.reduce();
         return newFrac;
     }
 
     public Fraction multiply(Fraction other)
     {
-        int num = this.numerator * other.getNum();
-        int den = this.denominator * other.getDen();
+        int num = this.numerator * other.numerator;
+        int den = this.denominator * other.denominator;
         Fraction newFrac = new Fraction(num, den);
         newFrac.reduce();
         return newFrac;
